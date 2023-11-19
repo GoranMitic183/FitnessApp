@@ -7,6 +7,7 @@ import axios from "axios";
 export const BlogContext = createContext({
   content: "",
   messages: [],
+  url: "",
   contact: {
     name: "",
     email: "",
@@ -26,7 +27,7 @@ export const BlogContext = createContext({
   allBlogsSetter: () => {},
   getMessagesQuery: () => {},
   deleteMessageQuery: () => {},
-
+  setVideoUrlHandler: () => {},
 });
 
 export default function BlogContextProvider({ children }) {
@@ -42,6 +43,11 @@ export default function BlogContextProvider({ children }) {
   });
   const [singleBlog, setSingleBlog] = useState({});
   const [isAdmin, setIsAdmin] = useState(false);
+  const [ videoUrl, setVideoUrl ] = useState('');
+
+  const setVideoUrlFn = (url) => {
+    setVideoUrl(url);
+  }
 
   const handleContent = (e) => {
     const contentType = e.target?.innerText.toLowerCase();
@@ -118,6 +124,7 @@ export default function BlogContextProvider({ children }) {
     selectedBlog: singleBlog,
     admin: isAdmin,
     blogsData: allBlogs,
+    url: videoUrl,
     changeContentType: handleContent,
     changeContentHelper: handleChangeContentHelper,
     inputChange: handleInputChange,
@@ -127,6 +134,7 @@ export default function BlogContextProvider({ children }) {
     allBlogsSetter: allBlogsHandler,
     getMessagesQuery: getMessages,
     deleteMessageQuery: deleteMessageHandler,
+    setVideoUrlHandler: setVideoUrlFn,
   };
 
   return (

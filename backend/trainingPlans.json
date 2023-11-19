@@ -6,7 +6,7 @@
     "price": "39.99",
     "program": [{
       "w1": [
-        { "mon": "legs" },
+        { "mon": "legs", "url" : "https://www.youtube.com/embed/H6mRkx1x77k" },
         { "wed": "push" },
         { "fri": "pull" },
         { "sun": "legs" }

@@ -1,12 +1,21 @@
 import React from "react";
+import { BlogContext } from "../../store/blogContext";
+import { useContext } from "react";
 
 const TrainingTable = ({ ...props }) => {
   const { data } = props;
+  console.log(data[0]);
 
-  console.log("TRAIN", data[0].program);
+  const { setVideoUrlHandler } = useContext(BlogContext)
+
+  const handleVideoUrl = (url) => {
+    setVideoUrlHandler(url)
+  }
+
+
 
   return (
-    <div>
+    <div style={{ background: "#d3d3d3" }}>
       <h3>{data[0].title}</h3>
       <table className="table table-dark table-striped">
         <thead>
@@ -19,14 +28,18 @@ const TrainingTable = ({ ...props }) => {
           </tr>
         </thead>
         <tbody>
-        {Object.values(data[0].program).map((week, index) => {
-            console.log(week);
+          {Object.values(data[0].program).map((week, index) => {
+            const weekData = Object.values(week)[0];
+            const weekDataValues = Object.values(weekData);
+            // const videoUrl = weekDataValues[1]
+            // console.log(videoUrl);
             return (
               <tr key={index}>
                 <th scope="row">{index + 1}</th>
-                {/* {week.map((day, dayIndex) => (
-                  <td key={dayIndex}>{Object.values(day)}</td>
-                ))} */}
+                {weekDataValues.map((day, dayIndex) => (
+                  // const videoUrl = Object.values(day)[1]
+                  <td onClick={() => handleVideoUrl(Object.values(day)[1])} key={dayIndex}>{Object.values(day)[0]}</td>
+                ))}
               </tr>
             );
           })}
@@ -37,5 +50,3 @@ const TrainingTable = ({ ...props }) => {
 };
 
 export default TrainingTable;
-
-

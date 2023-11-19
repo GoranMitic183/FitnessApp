@@ -17,7 +17,7 @@ import SingleBlog from "./singleBlog.component";
 import ReadMoreBlog from "./readMoreBlog.component";
 
 const Home = () => {
-  const { content, changeContentType, admin, adminCheck } =
+  const { content, changeContentType, admin, adminCheck, url } =
     useContext(BlogContext);
 
   const { isLoading, error, data } = useQuery({
@@ -97,7 +97,8 @@ const Home = () => {
       {content === "editblog" && <EditBlog data={data}/>}
         </div>
         <Iframe
-          url="https://www.youtube.com/embed/6grpJFNkiDs"
+          // url="https://www.youtube.com/embed/6grpJFNkiDs"
+          url={url}
           width="550px"
           height="300px"
           id=""
@@ -110,7 +111,7 @@ const Home = () => {
         <h1 className={classes.programTitle}>30 Day Program</h1>
         <div className={classes.cards}>
           {error && toast.error(error)}
-          {isLoading && <p>Loading....</p>}
+          {isLoading && <p>Loading....</p>}+
           {data &&
             data.map((plan) => {
               return (
