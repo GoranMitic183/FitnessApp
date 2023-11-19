@@ -1,0 +1,25 @@
+/* .cards {
+    display: flex;
+    width: 100%;
+}
+.programTitle {
+    text-align: center;
+    color: #d8d8d8
+} */
+.img {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+.startBtn {
+    position: absolute;
+    left: 18rem;
+    top: 20rem;
+}
+.welcomeBck {
+    display: flex;
+    height: 100vh;
+    background: url('https://images.squarespace-cdn.com/content/v1/5dfbf93da16ab5503da18e83/1672676260228-YKVCBW35B2OQEPZYD3BX/GZ6A1762.jpg?format=1500w');
+    background-repeat: no-repeat;
+    background-size: cover;
+}

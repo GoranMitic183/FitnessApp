@@ -1,71 +1,136 @@
 import React, { useState } from "react";
-import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
-import { NavLink } from "react-router-dom";
-import Calendar from "./calendar.component";
+import { useNavigate, Link } from "react-router-dom";
+import toast, { Toaster } from "react-hot-toast";
+import {
+  MDBCard,
+  MDBCardBody,
+  MDBInput,
+  MDBCardFooter,
+  MDBValidation,
+  MDBBtn,
+  MDBIcon,
+} from "mdb-react-ui-kit";
+import { useMutation } from "@tanstack/react-query";
+import classes from "./login.module.css";
+import * as api from "../query/loginQuery";
+
 
 function Login() {
   const [formData, setLoginData] = useState({
-    username: "",
-    hpassword: "",
+    email: "",
+    password: "",
   });
+
+  const navigate = useNavigate();
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setLoginData({ ...formData, [name]: value });
   };
 
-  const { isLoading, error, data } = useQuery(
-    ["login"],
-    async () => {
-      const response = await axios.post(
-        "https://localhost:3001/login",
-        formData
-      );
-      return response.data;
-    },
-  );
+  async function loginFn(formData) {
+    try {
+      const response = await fetch("http://localhost:3001/login", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+      // const response = await api.signIn(formData);
+      if (!response.ok) {
+        throw new Error("Failed to login. Please try again.");
+      }
+      const data = await response.json();
+      localStorage.setItem('token', JSON.stringify({token:data.token, role:data.role, username:data.user.firstName}))
+    } catch (error) {
+      console.error("Error during login:", error.message);
+      throw new Error("Failed to login. Please try again.");
+    }
+  }
 
-  const handleLogin = async (e) => {
+  const { isLoading, isError, isSuccess, mutate } = useMutation({
+    mutationKey: ["login"],
+    mutationFn: loginFn,
+  });
+
+  const handleLogin = (e) => {
     e.preventDefault();
-    
-    if (isLoading) return "Loading...";
-
-    if (error) return "An error has occurred: " + error.message;
-
-    if (data) {
-      localStorage.setItem("token", data.token);
-      alert("Successful login!");
+    if (formData.email.length > 3 && formData.password.length > 3) {
+      mutate(formData);
     }
   };
 
+  if (isSuccess) {
+    toast.success("Successful login!");
+    setTimeout(() => {
+      navigate("/home");
+    }, 1000);
+  }
+  if (isError) {
+    toast.error("Failed to login!");
+  }
+
   return (
-    <div>
-      <form onSubmit={()=>handleLogin}>
-        <h2>Login</h2>
-        <label htmlFor="username">Username</label>
-        <input
-          type="text"
-          id="username"
-          name="username"
-          value={formData.username}
-          onChange={handleInputChange}
-          required
-        />
-        <label htmlFor="password">Password</label>
-        <input
-          type="password"
-          id="hpassword"
-          name="hpassword"
-          value={formData.hpassword}
-          onChange={handleInputChange}
-          required
-        />
-         <button type="submit" disabled={isLoading}>
-        {isLoading ? "Loading..." : "Register"}
-      </button>
-        {data && <NavLink to='/calendar'>{<Calendar></Calendar>}</NavLink>}
-      </form>
+    <div className={classes.welcomeBck}>
+      <div
+        style={{
+          margin: "auto",
+          padding: "15px",
+          maxWidth: "450px",
+          alignContent: "center",
+          marginTop: "120px",
+        }}
+      >
+        <Toaster />
+        <MDBCard alignment="center" style={{ opacity: "0.8" }}>
+          <MDBIcon fas icon="user-circle" className="fa-2x" />
+          <h5>Login</h5>
+          <MDBCardBody>
+            <MDBValidation
+              onSubmit={handleLogin}
+              noValidate
+              className="row g-3"
+            >
+              <div className="col-md-12">
+                <MDBInput
+                  label="Email"
+                  type="email"
+                  value={formData.email}
+                  name="email"
+                  onChange={handleInputChange}
+                  required
+                  // invalid
+                  validation="Please provide email"
+                />
+              </div>
+              <div className="col-md-12">
+                <MDBInput
+                  label="Password"
+                  type="password"
+                  value={formData.password}
+                  name="password"
+                  onChange={handleInputChange}
+                  required
+                  // invalid
+                  validation="Please provide password"
+                />
+              </div>
+
+              <div className="col-12">
+                <MDBBtn style={{ width: "100%" }} className="btn btn-secondary">
+                  Login
+                </MDBBtn>
+              </div>
+            </MDBValidation>
+          </MDBCardBody>
+          <MDBCardFooter>
+            <Link to="/register">
+              <p>Don't have account?Sign out</p>
+            </Link>
+          </MDBCardFooter>
+        </MDBCard>
+      </div>
     </div>
   );
 }

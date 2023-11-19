@@ -1,0 +1,134 @@
+[
+  {
+    "image": "https://static.wixstatic.com/media/d1d11f_b9bf77d9759444368b9e713c79354105~mv2.png/v1/fill/w_640,h_448,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/d1d11f_b9bf77d9759444368b9e713c79354105~mv2.png",
+    "title": "Hypertrophy program",
+    "description": "4 weeks hypertrophy training with all big 3 lifts and many more exercises.",
+    "price": "39.99",
+    "program": [{
+      "w1": [
+        { "mon": "legs" },
+        { "wed": "push" },
+        { "fri": "pull" },
+        { "sun": "legs" }
+      ]},
+      {"w2": [
+        { "mon": "arms" },
+        { "wed": "push" },
+        { "fri": "pull" },
+        { "sun": "legs" }
+      ]},
+      {"w3": [
+        { "mon": "push" },
+        { "wed": "pull" },
+        { "fri": "legs" },
+        { "sun": "push" }
+      ]},
+      {"w4": [
+        { "mon": "pull" },
+        { "wed": "legs" },
+        { "fri": "push" },
+        { "sun": "arms" }
+      ]
+    }]
+  },
+
+  {
+    "title": "Weight loss program",
+    "description": "4 weeks weight loss program with diet and online consultation with a personal trainer.",
+    "price": "49.99",
+    "program": [
+      {
+        "w1": [
+          { "mon": "condition" },
+          { "wed": "strength" },
+          { "fri": "cardio" },
+          { "sun": "hypertrophy" }
+        ],
+        "w2": [
+          { "mon": "strength" },
+          { "wed": "cardio" },
+          { "fri": "condition" },
+          { "sun": "hypertrophy" }
+        ],
+        "w3": [
+          { "mon": "condition" },
+          { "wed": "cardio" },
+          { "fri": "strength" },
+          { "sun": "hypertrophy" }
+        ],
+        "w4": [
+          { "mon": "strength" },
+          { "wed": "hypertrophy" },
+          { "fri": "cardio" },
+          { "sun": "condition" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "title": "Strength and conditioning program.",
+    "description": "4 weeks strength and conditioning program with diet for profesional athletes to emprove their overall performance.",
+    "price": "59.99",
+    "program": [
+      {
+        "w1": [
+          {
+            "mon": "legs2"
+          },
+          {
+            "wed": "push2"
+          },
+          {
+            "fri": "pull2"
+          },
+          {
+            "sun": "legs3"
+          }
+        ],
+        "w2": [
+          {
+            "mon": "arms1"
+          },
+          {
+            "wed": "push1"
+          },
+          {
+            "fri": "pull1"
+          },
+          {
+            "sun": "legs2"
+          }
+        ],
+        "w3": [
+          {
+            "mon": "push2"
+          },
+          {
+            "wed": "pull2"
+          },
+          {
+            "fri": "legs1"
+          },
+          {
+            "sun": "push3"
+          }
+        ],
+        "w4": [
+          {
+            "mon": "pull3"
+          },
+          {
+            "wed": "legs2"
+          },
+          {
+            "fri": "push1"
+          },
+          {
+            "sun": "arms1"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -3,13 +3,15 @@ const Schema = mongoose.Schema;
 
 const userSchema = new Schema(
   {
-    username: { type: String, require: true, unique: true },
-    hpassword: { type: String, require: true },
-    email: { type: String, require: true, unique: true },
+    firstName: { type: String, required: true },
+    lastName: { type: String, required: true },
+    hpassword: { type: String, required: false },
+    email: { type: String, required: true },
+    role: { type: Number, required: true, default: 0}
   },
-  { timestamps: true }
+  { collection: "users" }
 );
 
-const User = mongoose.model("User", userSchema);
+const User = mongoose.model("userSchema", userSchema);
 
 module.exports = User;
