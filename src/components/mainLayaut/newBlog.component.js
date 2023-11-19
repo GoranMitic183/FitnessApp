@@ -13,7 +13,7 @@ import { useMutation } from "@tanstack/react-query";
 import { queryClient } from "../../query/blogsQuery";
 import { useContext } from "react";
 import { BlogContext } from "../../store/blogContext";
-
+import { toast } from "react-hot-toast"
 
 const NewBlog = () => {
   const [formData, setLoginData] = useState({
@@ -30,6 +30,8 @@ const NewBlog = () => {
     mutationFn: postNewBlog,
     onSuccess: () => {
       queryClient.invalidateQueries({queryKey: ['getBlogsKey']});
+      changeContentHelper("blog")
+      toast.success("New blog added successfuly!")
     }
   });
 

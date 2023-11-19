@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 import { useContext } from "react";
 import { BlogContext } from "../../store/blogContext";
@@ -12,6 +12,8 @@ const Messages = () => {
   const { messages } = useContext(BlogContext);
   const [isAllMessages, setIsAllMessages] = useState(true);
   // const [isOneMessage, setIsOneMessage] = useState(false);
+  // const [ messagesState, setMessagesState ] = useState([]);
+
 
   const { mutate } = useMutation({
     mutationKey: ["deleteMessage"],
@@ -23,6 +25,10 @@ const Messages = () => {
       toast.error("Failed to delete message!Try again!");
     },
   });
+
+  // useEffect(() => {
+
+  // },[messages])
 
   const handleReadMessage = (id) => {
     const messageId = messages.find((message) => message._id === id);
@@ -37,6 +43,7 @@ const Messages = () => {
 
   const handleDelete = (id) => {
     mutate(id);
+
     // deleteMessage(id)
   };
 

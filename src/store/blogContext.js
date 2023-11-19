@@ -20,7 +20,7 @@ export const BlogContext = createContext({
   changeContentType: () => {},
   changeContentHelper: () => {},
   inputChange: () => {},
-  // allMessages: () => {},
+  allMessages: () => {},
   singleBlogSeter: () => {},
   adminCheck: () => {},
   allBlogsSetter: () => {},
@@ -57,9 +57,9 @@ export default function BlogContextProvider({ children }) {
     setFormData({ ...formData, [name]: value });
   };
 
-  // const allMessagesHandler = (allMessages) => {
-  //   setMessage(allMessages);
-  // };
+  const allMessagesHandler = (allMessages) => {
+    setMessage(allMessages);
+  };
 
   const setSingleBlogFn = (blog) => {
     setSingleBlog(blog);
@@ -121,7 +121,7 @@ export default function BlogContextProvider({ children }) {
     changeContentType: handleContent,
     changeContentHelper: handleChangeContentHelper,
     inputChange: handleInputChange,
-    // allMessages: allMessagesHandler,
+    allMessages: allMessagesHandler,
     singleBlogSeter: setSingleBlogFn,
     adminCheck: adminHandler,
     allBlogsSetter: allBlogsHandler,

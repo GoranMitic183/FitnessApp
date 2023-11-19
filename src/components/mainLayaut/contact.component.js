@@ -9,7 +9,7 @@ import "react-datepicker/dist/react-datepicker.css";
 import { MDBInput } from "mdb-react-ui-kit";
 
 const ContactForm = () => {
-  const { contact, inputChange } = useContext(BlogContext);
+  const { contact, inputChange, changeContentHelper } = useContext(BlogContext);
   console.log(contact);
 
   async function sendMsg(contact) {
@@ -40,7 +40,7 @@ const ContactForm = () => {
     }
   }
 
-  const { isLoading, isError, isSuccess, mutate } = useMutation({
+  const { isSuccess, isError, mutate } = useMutation({
     mutationKey: ["contactForm"],
     mutationFn: sendMsg,
   });
@@ -48,9 +48,14 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     mutate(contact);
-    if (isSuccess) {
-      toast.success("Message was sent!");
+    if(isSuccess){
+      toast.success("Message is send!");
+      changeContentHelper("")
     }
+    if(isError){
+      toast.error("Failed to send message!")
+    }
+
   };
 
   return (
@@ -64,7 +69,6 @@ const ContactForm = () => {
       }}
     >
       <Toaster />
-
       <section class="mb-4">
         <h2
           class="h1-responsive font-weight-bold text-start my-4"

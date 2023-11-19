@@ -44,6 +44,7 @@ const EditBlog = () => {
       navigate("/home");
       singleBlogSeter(formData);
       toast.success("Blog is edited!");
+      changeContentHelper("blog")
     },
     onError: () => {
       toast.error("Error!Try again.");

@@ -2,27 +2,32 @@ import React, {
   useEffect,
   useState,
   useRef,
-  useMutation,
   useContext,
 } from "react";
 import { useNavigate } from "react-router-dom";
 import classes from "./header.module.css";
 import InboxModal from "./inboxModal.component";
-// import { getMessages } from "../../query/messagesQuery";
 import { BlogContext } from "../../store/blogContext";
 import { useQuery } from "@tanstack/react-query";
+import { toast } from "react-toastify";
 
 const Header = () => {
   const { allMessages, messages, admin, adminCheck, getMessagesQuery } = useContext(BlogContext);
   const navigate = useNavigate();
 
-  const { data } = useQuery({
-    mutationKey: ["getMessage"],
-    mutationFn: getMessagesQuery,
-    onSuccess: () => {
-      allMessages(data);
-    },
-  });
+  // const { data, isSuccess } = useQuery({
+  //   mutationKey: ["getMessage"],
+  //   mutationFn: getMessagesQuery,
+  //   // onSuccess: () => {
+  //   //   allMessages(data);
+  //   // },
+  // });
+
+  useEffect(()=> {
+  const data = getMessagesQuery()
+  },[])
+
+  // isSuccess? allMessages(data) : toast.error("Cant find messages!")
 
   let numberOfMessages;
   if (messages && messages.length === 0) {

@@ -2,13 +2,11 @@ import React from "react";
 import { useContext } from "react";
 import { BlogContext } from "../../store/blogContext";
 import { useMutation } from "@tanstack/react-query";
-import { toast } from "react-toastify";
+import { toast } from "react-hot-toast";
 import { deleteBlog } from "../../query/blogsQuery";
 import { queryClient } from "../../query/blogsQuery";
 
 const SingleBlog = ({ _id, title, description }) => {
-
-
 
   const { changeContentHelper, singleBlogSeter, admin, blogsData } =
     useContext(BlogContext);
