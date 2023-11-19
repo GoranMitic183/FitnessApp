@@ -110,7 +110,7 @@ const Home = () => {
         <h1 className={classes.programTitle}>30 Day Program</h1>
         <div className={classes.cards}>
           {error && toast.error(error)}
-          {isLoading && <p>Loading...</p>}
+          {isLoading && <p>Loading....</p>}
           {data &&
             data.map((plan) => {
               return (
