@@ -31,14 +31,11 @@ const TrainingTable = ({ ...props }) => {
           {Object.values(data[0].program).map((week, index) => {
             const weekData = Object.values(week)[0];
             const weekDataValues = Object.values(weekData);
-            // const videoUrl = weekDataValues[1]
-            // console.log(videoUrl);
             return (
               <tr key={index}>
                 <th scope="row">{index + 1}</th>
                 {weekDataValues.map((day, dayIndex) => (
-                  // const videoUrl = Object.values(day)[1]
-                  <td onClick={() => handleVideoUrl(Object.values(day)[1])} key={dayIndex}>{Object.values(day)[0]}</td>
+                  <td style={{cursor: "pointer"}} onClick={() => handleVideoUrl(Object.values(day)[1])} key={dayIndex}>{Object.values(day)[0]}</td>
                 ))}
               </tr>
             );

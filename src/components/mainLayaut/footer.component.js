@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -10,24 +10,24 @@ const Footer = () => {
     </div>
 
     <div>
-      <Link htmlFor="www.facebook.com" className="me-4 link-secondary">
+      <a href="https://facebook.com" target="blank" className="me-4 link-secondary">
         <i class="fab fa-facebook-f"></i>
-      </Link>
-      <Link to="" class="me-4 link-secondary">
+      </a>
+      <a href="https://twitter.com" target="blank" class="me-4 link-secondary">
         <i class="fab fa-twitter"></i>
-      </Link>
-      <Link to="" class="me-4 link-secondary">
+      </a>
+      <a href="https://google.com" target="blank" class="me-4 link-secondary">
         <i class="fab fa-google"></i>
-      </Link>
-      <Link to="" class="me-4 link-secondary">
+      </a>
+      <a href="https://instagram.com" target="blank" class="me-4 link-secondary">
         <i class="fab fa-instagram"></i>
-      </Link>
-      <Link to="" class="me-4 link-secondary">
+      </a>
+      <a href="https://linkedin.com" target="blank" class="me-4 link-secondary">
         <i class="fab fa-linkedin"></i>
-      </Link>
-      <Link to="" class="me-4 link-secondary">
+      </a>
+      <a href="https://github.com" target="blank" class="me-4 link-secondary">
         <i class="fab fa-github"></i>
-      </Link>
+      </a>
     </div>
   </section>
 
@@ -47,31 +47,6 @@ const Footer = () => {
           scrolling="no"
           style={{ width: '280px', height: '200px' }}
         ></iframe>
-        <style>
-          {`
-            .mapouter {
-              position: relative;
-              height: 270px;
-              width: 280px;
-              background: #fff;
-            }
-            .mapouter a {
-              color: #fff !important;
-              position: absolute !important;
-              top: 0 !important;
-              z-index: 0 !important;
-            }
-            .gmap_canvas {
-              overflow: hidden;
-              height: 270px;
-              width: 280px;
-            }
-            .gmap_canvas iframe {
-              position: relative;
-              z-index: 2;
-            }
-          `}
-        </style>
       </div>
     </div>
         </div>
@@ -120,7 +95,7 @@ const Footer = () => {
             miticgoran.pt@icloud.com
           </p>
           <p><i class="fas fa-phone me-3 text-secondary"></i> +381 640757265</p>
-          <p><i class="fas fa-print me-3 text-secondary"></i> +381 640757265</p>
+          {/* <p><i class="fas fa-print me-3 text-secondary"></i> +381 640757265</p> */}
         </div>
       </div>
     </div>
@@ -128,7 +103,7 @@ const Footer = () => {
 
   <div class="text-center p-4" style={{backgroundColor: "rgba(0, 0, 0, 0.025)"}}>
     © 2021 Copyright:
-    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    <a class="text-reset fw-bold" href="https://github.com/GoranMitic183/FitnessApp" target="blank">Goran Mitic</a>
   </div>
 </footer>
     </div>

@@ -6,33 +6,34 @@
     "price": "39.99",
     "program": [{
       "w1": [
-        { "mon": "legs", "url" : "https://www.youtube.com/embed/H6mRkx1x77k" },
-        { "wed": "push" },
-        { "fri": "pull" },
-        { "sun": "legs" }
+        { "mon": "Legs", "url": "https://www.youtube.com/embed/H6mRkx1x77k" },
+        { "wed": "Push", "url": "https://www.youtube.com/embed/dPb9JxFMuuE" },
+        { "fri": "Pull", "url": "https://www.youtube.com/embed/YvKOvyiAdAI" },
+        { "sun": "Legs", "url": "https://www.youtube.com/embed/RjexvOAsVtI" }
       ]},
       {"w2": [
-        { "mon": "arms" },
-        { "wed": "push" },
-        { "fri": "pull" },
-        { "sun": "legs" }
+        { "mon": "Arms", "url": "https://www.youtube.com/embed/Bm50gTskqCs" },
+        { "wed": "Push", "url": "https://www.youtube.com/embed/dPb9JxFMuuE" },
+        { "fri": "Pull", "url": "https://www.youtube.com/embed/YvKOvyiAdAI" },
+        { "sun": "Legs", "url": "https://www.youtube.com/embed/RjexvOAsVtI" }
       ]},
       {"w3": [
-        { "mon": "push" },
-        { "wed": "pull" },
-        { "fri": "legs" },
-        { "sun": "push" }
+        { "mon": "Push", "url": "https://www.youtube.com/embed/dPb9JxFMuuE" },
+        { "wed": "Pull", "url": "https://www.youtube.com/embed/YvKOvyiAdAI" },
+        { "fri": "Legs", "url": "https://www.youtube.com/embed/RjexvOAsVtI" },
+        { "sun": "Push", "url": "https://www.youtube.com/embed/dPb9JxFMuuE" }
       ]},
       {"w4": [
-        { "mon": "pull" },
-        { "wed": "legs" },
-        { "fri": "push" },
-        { "sun": "arms" }
+        { "mon": "Pull", "url": "https://www.youtube.com/embed/YvKOvyiAdAI" },
+        { "wed": "Legs", "url": "https://www.youtube.com/embed/H6mRkx1x77k" },
+        { "fri": "Push", "url": "https://www.youtube.com/embed/dPb9JxFMuuE" },
+        { "sun": "Arms","url": "https://www.youtube.com/embed/Bm50gTskqCs"}
       ]
     }]
   },
 
   {
+    "image": "https://static.wixstatic.com/media/d1d11f_b9bf77d9759444368b9e713c79354105~mv2.png/v1/fill/w_640,h_448,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/d1d11f_b9bf77d9759444368b9e713c79354105~mv2.png",
     "title": "Weight loss program",
     "description": "4 weeks weight loss program with diet and online consultation with a personal trainer.",
     "price": "49.99",
@@ -67,6 +68,7 @@
   },
 
   {
+    "image": "https://static.wixstatic.com/media/d1d11f_b9bf77d9759444368b9e713c79354105~mv2.png/v1/fill/w_640,h_448,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/d1d11f_b9bf77d9759444368b9e713c79354105~mv2.png",
     "title": "Strength and conditioning program.",
     "description": "4 weeks strength and conditioning program with diet for profesional athletes to emprove their overall performance.",
     "price": "59.99",

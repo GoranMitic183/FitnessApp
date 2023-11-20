@@ -12,22 +12,12 @@ import { useQuery } from "@tanstack/react-query";
 import { toast } from "react-toastify";
 
 const Header = () => {
-  const { allMessages, messages, admin, adminCheck, getMessagesQuery } = useContext(BlogContext);
+  const { messages, admin, adminCheck, getMessagesQuery } = useContext(BlogContext);
   const navigate = useNavigate();
-
-  // const { data, isSuccess } = useQuery({
-  //   mutationKey: ["getMessage"],
-  //   mutationFn: getMessagesQuery,
-  //   // onSuccess: () => {
-  //   //   allMessages(data);
-  //   // },
-  // });
 
   useEffect(()=> {
   const data = getMessagesQuery()
   },[])
-
-  // isSuccess? allMessages(data) : toast.error("Cant find messages!")
 
   let numberOfMessages;
   if (messages && messages.length === 0) {

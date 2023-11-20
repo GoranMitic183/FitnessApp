@@ -35,7 +35,7 @@ const ReadMoreBlog = (data) => {
   };
 
   return (
-    <div style={{background: "#d8d8d8"}}>
+    <div style={{background: "#d8d8d8", borderRadius: "1rem", padding: "1rem", overflow: "scroll", maxHeight: "25rem"}}>
       <div>
         <h2>{selectedBlog.title}</h2>
         <p>{selectedBlog.content}</p>
@@ -50,7 +50,7 @@ const ReadMoreBlog = (data) => {
       {admin && (
         <button
           className="btn btn-dark"
-          style={{ marginRight: "0.5rem" }}
+          style={{ margin: "0.7rem" }}
           onClick={() => handleEditBlog(selectedBlog._id)}
         >
           Edit

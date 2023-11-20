@@ -51,10 +51,10 @@ const NewBlog = () => {
         <div
           style={{
             margin: "auto",
-            padding: "15px",
+            padding: "0.5rem",
             maxWidth: "450px",
             alignContent: "center",
-            marginTop: "0.5rem",
+            // marginTop: "0.5rem",
           }}
         >
           <MDBCard alignment="center" style={{ opacity: "0.9" }}>

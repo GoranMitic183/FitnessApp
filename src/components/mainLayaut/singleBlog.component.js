@@ -44,7 +44,7 @@ const SingleBlog = ({ _id, title, description }) => {
     });
   };
   return (
-    <div key={_id}>
+    <div key={_id} style={{padding: "1rem"}}>
       <div>
         <h2>{title}</h2>
         <p>{description}</p>

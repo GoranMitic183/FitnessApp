@@ -78,14 +78,14 @@ const Home = () => {
           >
             Stopwatch
           </button>
-          <button
+          {!admin && (<button
             className={`btn btn-primary ${classes.startBtn}`}
             onClick={changeContentType}
           >
             Contact
-          </button>
+          </button>)}
         </div>
-        <div className={classes.contentContainer}>
+        <div className={classes.contentContainer} style={content === "blog"? {overflow: "scroll"} : {overflow: "hidden"}}>
           {content === "blog" && <Blog />}
           {content === "table" && <TrainingTable data={data} />}
           {content === "contact" && <ContactForm />}

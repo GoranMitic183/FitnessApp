@@ -4,7 +4,7 @@ import { BlogContext } from "../../store/blogContext";
 import { toast } from "react-hot-toast";
 import { useMutation } from "@tanstack/react-query";
 import { Toaster } from "react-hot-toast";
-import DatePicker from "react-datepicker";
+// import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import { MDBInput } from "mdb-react-ui-kit";
 
@@ -40,22 +40,20 @@ const ContactForm = () => {
     }
   }
 
-  const { isSuccess, isError, mutate } = useMutation({
+  const { isError, mutate } = useMutation({
     mutationKey: ["contactForm"],
     mutationFn: sendMsg,
+    onSuccess: () => {
+      toast.success("Message is send!");
+    }
   });
 
   const handleSubmit = (e) => {
     e.preventDefault();
     mutate(contact);
-    if(isSuccess){
-      toast.success("Message is send!");
-      changeContentHelper("")
-    }
     if(isError){
       toast.error("Failed to send message!")
     }
-
   };
 
   return (
@@ -177,9 +175,9 @@ const ContactForm = () => {
                         onChange={inputChange}
                         required
                       ></input>
-                      <label for="example">
+                      {/* <label for="example">
                         <i className="fas fa-calendar input-prefix"></i>
-                      </label>
+                      </label> */}
                     </div>
                   </div>
                 </div>
