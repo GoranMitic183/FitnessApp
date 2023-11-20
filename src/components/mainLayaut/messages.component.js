@@ -44,8 +44,8 @@ const Messages = () => {
         <ul>
           {messages.map((message) => {
             return (
-              <div >
-                <li key={message._id}>
+              <div key={message._id}>
+                <li >
                   <div>
                     <span>
                       <strong style={{ fontSize: "1.3rem" }}>

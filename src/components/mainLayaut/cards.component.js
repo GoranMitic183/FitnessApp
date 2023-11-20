@@ -21,9 +21,9 @@ const { image, title, description, price, id} = props
 
   return (
     <div className="container">
-      <button
+      <div
         className={`card ${classes.cards}`}
-        style={{ width: "18rem" ,marginBottom: "3rem"}}
+        style={{ width: "18rem" ,marginBottom: "3rem", cursor: "pointer"}}
         onClick={onTrainingHandler}
       >
         <img src={image} className="card-img-top" alt="Training plan" />
@@ -37,7 +37,7 @@ const { image, title, description, price, id} = props
           </button>
           {isRegister && <p>You must be registered!</p>}
         </div>
-      </button>
+      </div>
     </div>
   );
 };

@@ -3,40 +3,40 @@ import { Link, NavLink } from "react-router-dom";
 const Footer = () => {
   return (
     <div>
-<footer class="text-center text-lg-start text-muted" style={{backgroundColor: "#d8d8d8"}}>
-  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-    <div class="me-5 d-none d-lg-block">
+<footer className="text-center text-lg-start text-muted" style={{backgroundColor: "#d8d8d8"}}>
+  <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <div className="me-5 d-none d-lg-block">
       <span>Get connected with us on social networks:</span>
     </div>
 
     <div>
       <a href="https://facebook.com" target="blank" className="me-4 link-secondary">
-        <i class="fab fa-facebook-f"></i>
+        <i className="fab fa-facebook-f"></i>
       </a>
-      <a href="https://twitter.com" target="blank" class="me-4 link-secondary">
-        <i class="fab fa-twitter"></i>
+      <a href="https://twitter.com" target="blank" className="me-4 link-secondary">
+        <i className="fab fa-twitter"></i>
       </a>
-      <a href="https://google.com" target="blank" class="me-4 link-secondary">
-        <i class="fab fa-google"></i>
+      <a href="https://google.com" target="blank" className="me-4 link-secondary">
+        <i className="fab fa-google"></i>
       </a>
-      <a href="https://instagram.com" target="blank" class="me-4 link-secondary">
-        <i class="fab fa-instagram"></i>
+      <a href="https://instagram.com" target="blank" className="me-4 link-secondary">
+        <i className="fab fa-instagram"></i>
       </a>
-      <a href="https://linkedin.com" target="blank" class="me-4 link-secondary">
-        <i class="fab fa-linkedin"></i>
+      <a href="https://linkedin.com" target="blank" className="me-4 link-secondary">
+        <i className="fab fa-linkedin"></i>
       </a>
-      <a href="https://github.com" target="blank" class="me-4 link-secondary">
-        <i class="fab fa-github"></i>
+      <a href="https://github.com" target="blank" className="me-4 link-secondary">
+        <i className="fab fa-github"></i>
       </a>
     </div>
   </section>
 
-  <section class="">
-    <div class="container text-center text-md-start mt-5">
-      <div class="row mt-3">
-        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-          <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3 text-secondary"></i>MG.STRENGHT 
+  <section className="">
+    <div className="container text-center text-md-start mt-5">
+      <div className="row mt-3">
+        <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <h6 className="text-uppercase fw-bold mb-4">
+            <i className="fas fa-gem me-3 text-secondary"></i>MG.STRENGHT 
           </h6>
           <div className="mapouter">
       <div className="gmap_canvas">
@@ -51,59 +51,59 @@ const Footer = () => {
     </div>
         </div>
 
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-          <h6 class="text-uppercase fw-bold mb-4">
+        <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h6 className="text-uppercase fw-bold mb-4">
             Products
           </h6>
           <p>
-            <a href="#!" class="text-reset">Angular</a>
+            <a href="#!" className="text-reset">Angular</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">React</a>
+            <a href="#!" className="text-reset">React</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Vue</a>
+            <a href="#!" className="text-reset">Vue</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Laravel</a>
+            <a href="#!" className="text-reset">Laravel</a>
           </p>
         </div>
 
-        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-          <h6 class="text-uppercase fw-bold mb-4">
+        <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+          <h6 className="text-uppercase fw-bold mb-4">
             Useful links
           </h6>
           <p>
-            <a href="#!" class="text-reset">Pricing</a>
+            <a href="#!" className="text-reset">Pricing</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Settings</a>
+            <a href="#!" className="text-reset">Settings</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Orders</a>
+            <a href="#!" className="text-reset">Orders</a>
           </p>
           <p>
-            <a href="#!" class="text-reset">Help</a>
+            <a href="#!" className="text-reset">Help</a>
           </p>
         </div>
 
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-          <p><i class="fas fa-home me-3 text-secondary"></i> Belgrade 11000, Serbia , SR</p>
+        <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <h6 className="text-uppercase fw-bold mb-4">Contact</h6>
+          <p><i className="fas fa-home me-3 text-secondary"></i> Belgrade 11000, Serbia , SR</p>
           <p>
-            <i class="fas fa-envelope me-3 text-secondary"></i>
+            <i className="fas fa-envelope me-3 text-secondary"></i>
             miticgoran.pt@icloud.com
           </p>
-          <p><i class="fas fa-phone me-3 text-secondary"></i> +381 640757265</p>
+          <p><i className="fas fa-phone me-3 text-secondary"></i> +381 640757265</p>
           {/* <p><i class="fas fa-print me-3 text-secondary"></i> +381 640757265</p> */}
         </div>
       </div>
     </div>
   </section>
 
-  <div class="text-center p-4" style={{backgroundColor: "rgba(0, 0, 0, 0.025)"}}>
+  <div className="text-center p-4" style={{backgroundColor: "rgba(0, 0, 0, 0.025)"}}>
     © 2021 Copyright:
-    <a class="text-reset fw-bold" href="https://github.com/GoranMitic183/FitnessApp" target="blank">Goran Mitic</a>
+    <a className="text-reset fw-bold" href="https://github.com/GoranMitic183/FitnessApp" target="blank">Goran Mitic</a>
   </div>
 </footer>
     </div>

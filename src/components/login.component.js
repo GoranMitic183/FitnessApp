@@ -12,7 +12,7 @@ import {
 } from "mdb-react-ui-kit";
 import { useMutation } from "@tanstack/react-query";
 import classes from "./login.module.css";
-import * as api from "../query/loginQuery";
+// import * as api from "../query/loginQuery";
 
 
 function Login() {
@@ -49,9 +49,12 @@ function Login() {
     }
   }
 
-  const { isLoading, isError, isSuccess, mutate } = useMutation({
+  const { isError, mutate } = useMutation({
     mutationKey: ["login"],
     mutationFn: loginFn,
+    onSuccess: () => {
+      navigate('/home')
+    }
   });
 
   const handleLogin = (e) => {
@@ -61,12 +64,6 @@ function Login() {
     }
   };
 
-  if (isSuccess) {
-    toast.success("Successful login!");
-    setTimeout(() => {
-      navigate("/home");
-    }, 1000);
-  }
   if (isError) {
     toast.error("Failed to login!");
   }

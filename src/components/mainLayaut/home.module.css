@@ -42,9 +42,10 @@
     flex-direction: column;
 }
 .contentContainer {
+    padding: 1rem;
     border-radius: 0.5rem;
     width: 35rem;
-    max-height: 25rem;
+    height: 20rem;
      overflow:scroll;
     /* scroll-behavior: smooth;  */
     background-color: #d8d8d8;

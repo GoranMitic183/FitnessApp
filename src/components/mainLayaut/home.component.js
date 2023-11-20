@@ -85,7 +85,7 @@ const Home = () => {
             Contact
           </button>)}
         </div>
-        <div className={classes.contentContainer} style={content === "blog"? {overflow: "scroll"} : {overflow: "hidden"}}>
+        <div className={classes.contentContainer} style={(content === "blog"? {overflow: "scroll"} : content === ""? {background: "none", overflow: "hidden"} : {overflow: "hidden"})}>
           {content === "blog" && <Blog />}
           {content === "table" && <TrainingTable data={data} />}
           {content === "contact" && <ContactForm />}
@@ -98,7 +98,7 @@ const Home = () => {
         </div>
         <Iframe
           // url="https://www.youtube.com/embed/6grpJFNkiDs"
-          url={url}
+          url={content === ""? "" : url}
           width="550px"
           height="300px"
           id=""

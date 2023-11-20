@@ -19,7 +19,7 @@ const InboxModal = forwardRef(function Modal({actions}, ref) {
     <dialog className={classes.dialog} style={{background: "#d8d8d8", borderRadius: "1rem"}} id="modal" ref={dialog}>
         <h2>Inbox</h2>
         <Messages />
-        <form method="dialog" id="modal-actions" style={{display: "flex"}}>
+        <form method="dialog" id="modal-actions" >
         {actions}
       </form>
     </dialog>,

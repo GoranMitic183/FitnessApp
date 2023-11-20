@@ -16,7 +16,7 @@ const TrainingTable = ({ ...props }) => {
 
   return (
     <div style={{ background: "#d3d3d3" }}>
-      <h3>{data[0].title}</h3>
+      <h3 style={{marginBottom: "1rem"}}>{data[0].title}</h3>
       <table className="table table-dark table-striped">
         <thead>
           <tr>

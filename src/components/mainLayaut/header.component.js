@@ -8,11 +8,11 @@ import { useNavigate } from "react-router-dom";
 import classes from "./header.module.css";
 import InboxModal from "./inboxModal.component";
 import { BlogContext } from "../../store/blogContext";
-import { useQuery } from "@tanstack/react-query";
-import { toast } from "react-toastify";
+// import { useQuery } from "@tanstack/react-query";
+// import { toast } from "react-hot-toast";
 
 const Header = () => {
-  const { messages, admin, adminCheck, getMessagesQuery } = useContext(BlogContext);
+  const { messages, admin, adminCheck, getMessagesQuery, changeContentHelper } = useContext(BlogContext);
   const navigate = useNavigate();
 
   useEffect(()=> {
@@ -50,6 +50,7 @@ const Header = () => {
   const handleLogout = () => {
     localStorage.removeItem("token");
     navigate("/login");
+    changeContentHelper("")
   };
 
   const handleOpenModal = () => {
@@ -68,14 +69,14 @@ const Header = () => {
             {admin && storedToken && (
               <button
                 type="button"
-                class="btn btn-primary position-relative"
+                className="btn btn-primary position-relative"
                 style={{ marginRight: "1.5rem" }}
                 onClick={handleOpenModal}
               >
                 Inbox
-                <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
                   {numberOfMessages}
-                  <span class="visually-hidden">unread messages</span>
+                  <span className="visually-hidden">unread messages</span>
                 </span>
               </button>
             )}

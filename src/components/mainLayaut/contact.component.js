@@ -61,22 +61,23 @@ const ContactForm = () => {
       style={{
         paddingLeft: "6rem",
         height: "25rem",
+        // width:"100%",
         background: "#d8d8d8",
-        opacity: "0.9",
+        opacity: "1",
         borderRadius: "0.5rem",
       }}
     >
       <Toaster />
-      <section class="mb-4">
+      <section className="mb-4">
         <h2
-          class="h1-responsive font-weight-bold text-start my-4"
+          className="h1-responsive font-weight-bold text-start my-4"
           style={{ marginLeft: "6rem" }}
         >
           Contact me
         </h2>
 
-        <div class="row">
-          <div class="col-md-9 mb-md-0 mb-5">
+        <div className="row">
+          <div className="col-md-9 mb-md-0 mb-5">
             <form
               id="contact-form"
               name="contact-form"
@@ -84,14 +85,14 @@ const ContactForm = () => {
               method="POST"
               // onSubmit={handleSubmit}
             >
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="md-form mb-0">
+              <div className="row">
+                <div className="col-md-6">
+                  <div className="md-form mb-0">
                     <MDBInput
                       type="text"
                       id="name"
                       name="name"
-                      class="form-control"
+                      className="form-control"
                       value={contact.name}
                       onChange={inputChange}
                       required
@@ -102,13 +103,13 @@ const ContactForm = () => {
                   </div>
                 </div>
 
-                <div class="col-md-6">
-                  <div class="md-form mb-0">
+                <div className="col-md-6">
+                  <div className="md-form mb-0">
                     <input
                       type="text"
                       id="email"
                       name="email"
-                      class="form-control"
+                      className="form-control"
                       value={contact.email}
                       onChange={inputChange}
                       required
@@ -120,14 +121,14 @@ const ContactForm = () => {
                 </div>
               </div>
 
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="md-form mb-0">
+              <div className="row">
+                <div className="col-md-12">
+                  <div className="md-form mb-0">
                     <input
                       type="text"
                       id="subject"
                       name="subject"
-                      class="form-control"
+                      className="form-control"
                       value={contact.subject}
                       onChange={inputChange}
                       required
@@ -139,15 +140,15 @@ const ContactForm = () => {
                 </div>
               </div>
 
-              <div class="row">
-                <div class="col-md-12">
-                  <div class="md-form">
+              <div className="row">
+                <div className="col-md-12">
+                  <div className="md-form">
                     <textarea
                       type="text"
                       id="message"
                       name="message"
                       rows="2"
-                      class="form-control md-textarea"
+                      className="form-control md-textarea"
                       value={contact.message}
                       onChange={inputChange}
                       required
@@ -158,11 +159,11 @@ const ContactForm = () => {
               </div>
 
               <div className="row">
-                <div class="col-md-12">
-                  <div class="md-form">
+                <div className="col-md-12">
+                  <div className="md-form">
                     <div
                       id="date-picker-example"
-                      class="md-form md-outline input-with-post-icon datepicker"
+                      className="md-form md-outline input-with-post-icon datepicker"
                       inline="true"
                     >
                       <input
@@ -195,7 +196,7 @@ const ContactForm = () => {
                 Send
               </button>
             </div>
-            <div class="status"></div>
+            <div className="status"></div>
           </div>
         </div>
       </section>
