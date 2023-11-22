@@ -4,71 +4,127 @@
     "title": "Hypertrophy program",
     "description": "4 weeks hypertrophy training with all big 3 lifts and many more exercises.",
     "price": "39.99",
-    "program": [{
-      "w1": [
-        { "mon": "Legs", "url": "https://www.youtube.com/embed/H6mRkx1x77k" },
-        { "wed": "Push", "url": "https://www.youtube.com/embed/dPb9JxFMuuE" },
-        { "fri": "Pull", "url": "https://www.youtube.com/embed/YvKOvyiAdAI" },
-        { "sun": "Legs", "url": "https://www.youtube.com/embed/RjexvOAsVtI" }
-      ]},
-      {"w2": [
-        { "mon": "Arms", "url": "https://www.youtube.com/embed/Bm50gTskqCs" },
-        { "wed": "Push", "url": "https://www.youtube.com/embed/dPb9JxFMuuE" },
-        { "fri": "Pull", "url": "https://www.youtube.com/embed/YvKOvyiAdAI" },
-        { "sun": "Legs", "url": "https://www.youtube.com/embed/RjexvOAsVtI" }
-      ]},
-      {"w3": [
-        { "mon": "Push", "url": "https://www.youtube.com/embed/dPb9JxFMuuE" },
-        { "wed": "Pull", "url": "https://www.youtube.com/embed/YvKOvyiAdAI" },
-        { "fri": "Legs", "url": "https://www.youtube.com/embed/RjexvOAsVtI" },
-        { "sun": "Push", "url": "https://www.youtube.com/embed/dPb9JxFMuuE" }
-      ]},
-      {"w4": [
-        { "mon": "Pull", "url": "https://www.youtube.com/embed/YvKOvyiAdAI" },
-        { "wed": "Legs", "url": "https://www.youtube.com/embed/H6mRkx1x77k" },
-        { "fri": "Push", "url": "https://www.youtube.com/embed/dPb9JxFMuuE" },
-        { "sun": "Arms","url": "https://www.youtube.com/embed/Bm50gTskqCs"}
-      ]
-    }]
-  },
-
-  {
-    "image": "https://static.wixstatic.com/media/d1d11f_b9bf77d9759444368b9e713c79354105~mv2.png/v1/fill/w_640,h_448,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/d1d11f_b9bf77d9759444368b9e713c79354105~mv2.png",
-    "title": "Weight loss program",
-    "description": "4 weeks weight loss program with diet and online consultation with a personal trainer.",
-    "price": "49.99",
     "program": [
       {
         "w1": [
-          { "mon": "condition" },
-          { "wed": "strength" },
-          { "fri": "cardio" },
-          { "sun": "hypertrophy" }
-        ],
+          { "mon": "Legs", "url": "https://www.youtube.com/embed/H6mRkx1x77k" },
+          { "wed": "Push", "url": "https://www.youtube.com/embed/dPb9JxFMuuE" },
+          { "fri": "Pull", "url": "https://www.youtube.com/embed/YvKOvyiAdAI" },
+          { "sun": "Legs", "url": "https://www.youtube.com/embed/RjexvOAsVtI" }
+        ]
+      },
+      {
         "w2": [
-          { "mon": "strength" },
-          { "wed": "cardio" },
-          { "fri": "condition" },
-          { "sun": "hypertrophy" }
-        ],
+          { "mon": "Arms", "url": "https://www.youtube.com/embed/Bm50gTskqCs" },
+          { "wed": "Push", "url": "https://www.youtube.com/embed/dPb9JxFMuuE" },
+          { "fri": "Pull", "url": "https://www.youtube.com/embed/YvKOvyiAdAI" },
+          { "sun": "Legs", "url": "https://www.youtube.com/embed/RjexvOAsVtI" }
+        ]
+      },
+      {
         "w3": [
-          { "mon": "condition" },
-          { "wed": "cardio" },
-          { "fri": "strength" },
-          { "sun": "hypertrophy" }
-        ],
+          { "mon": "Push", "url": "https://www.youtube.com/embed/dPb9JxFMuuE" },
+          { "wed": "Pull", "url": "https://www.youtube.com/embed/YvKOvyiAdAI" },
+          { "fri": "Legs", "url": "https://www.youtube.com/embed/RjexvOAsVtI" },
+          { "sun": "Push", "url": "https://www.youtube.com/embed/dPb9JxFMuuE" }
+        ]
+      },
+      {
         "w4": [
-          { "mon": "strength" },
-          { "wed": "hypertrophy" },
-          { "fri": "cardio" },
-          { "sun": "condition" }
+          { "mon": "Pull", "url": "https://www.youtube.com/embed/YvKOvyiAdAI" },
+          { "wed": "Legs", "url": "https://www.youtube.com/embed/H6mRkx1x77k" },
+          { "fri": "Push", "url": "https://www.youtube.com/embed/dPb9JxFMuuE" },
+          { "sun": "Arms", "url": "https://www.youtube.com/embed/Bm50gTskqCs" }
         ]
       }
     ]
   },
 
   {
-    "image": "https://static.wixstatic.com/media/d1d11f_b9bf77d9759444368b9e713c79354105~mv2.png/v1/fill/w_640,h_448,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/d1d11f_b9bf77d9759444368b9e713c79354105~mv2.png",
+    "image": "https://www.usn.co.za/cdn/shop/articles/Training_Plans_Cover_Images-Weight_loss-14.jpg?v=1667562239",
+    "title": "Weight loss program",
+    "description": "4 weeks weight loss program with diet and online consultation with a personal trainer.",
+    "price": "49.99",
+    "program": [
+      {
+        "w1": [
+          {
+            "mon": "condition",
+            "url": "https://www.youtube.com/embedvlJWl66_2oQ"
+          },
+          {
+            "wed": "strength",
+            "url": "https://www.youtube.com/embed/H6mRkx1x77k"
+          },
+          {
+            "fri": "cardio",
+            "url": "https://www.youtube.com/embed/H6mRkx1x77k"
+          },
+          {
+            "sun": "hypertrophy",
+            "url": "https://www.youtube.com/embed/H6mRkx1x77k"
+          }
+        ],
+        "w2": [
+          {
+            "mon": "strength",
+            "url": "https://www.youtube.com/embed/H6mRkx1x77k"
+          },
+          {
+            "wed": "cardio",
+            "url": "https://www.youtube.com/embed/H6mRkx1x77k"
+          },
+          {
+            "fri": "condition",
+            "url": "https://www.youtube.com/embed/H6mRkx1x77k"
+          },
+          {
+            "sun": "hypertrophy",
+            "url": "https://www.youtube.com/embed/H6mRkx1x77k"
+          }
+        ],
+        "w3": [
+          {
+            "mon": "condition",
+            "url": "https://www.youtube.com/embed/H6mRkx1x77k"
+          },
+          {
+            "wed": "cardio",
+            "url": "https://www.youtube.com/embed/H6mRkx1x77k"
+          },
+          {
+            "fri": "strength",
+            "url": "https://www.youtube.com/embed/H6mRkx1x77k"
+          },
+          {
+            "sun": "hypertrophy",
+            "url": "https://www.youtube.com/embed/H6mRkx1x77k"
+          }
+        ],
+        "w4": [
+          {
+            "mon": "strength",
+            "url": "https://www.youtube.com/embed/H6mRkx1x77k"
+          },
+          {
+            "wed": "hypertrophy",
+            "url": "https://www.youtube.com/embed/H6mRkx1x77k"
+          },
+          {
+            "fri": "cardio",
+            "url": "https://www.youtube.com/embed/H6mRkx1x77k"
+          },
+          {
+            "sun": "condition",
+            "url": "https://www.youtube.com/embed/H6mRkx1x77k"
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "image": "https://preparelikeapro.com/wp-content/uploads/2021/07/strength-and-conditioning-coach-Melbourne-1.png",
     "title": "Strength and conditioning program.",
     "description": "4 weeks strength and conditioning program with diet for profesional athletes to emprove their overall performance.",
     "price": "59.99",
@@ -76,58 +132,74 @@
       {
         "w1": [
           {
-            "mon": "legs2"
+            "mon": "condition",
+            "url": "https://www.youtube.com/embedvlJWl66_2oQ"
           },
           {
-            "wed": "push2"
+            "wed": "strength",
+            "url": "https://www.youtube.com/embed/H6mRkx1x77k"
           },
           {
-            "fri": "pull2"
+            "fri": "cardio",
+            "url": "https://www.youtube.com/embed/H6mRkx1x77k"
           },
           {
-            "sun": "legs3"
+            "sun": "hypertrophy",
+            "url": "https://www.youtube.com/embed/H6mRkx1x77k"
           }
         ],
         "w2": [
           {
-            "mon": "arms1"
+            "mon": "strength",
+            "url": "https://www.youtube.com/embed/H6mRkx1x77k"
           },
           {
-            "wed": "push1"
+            "wed": "cardio",
+            "url": "https://www.youtube.com/embed/H6mRkx1x77k"
           },
           {
-            "fri": "pull1"
+            "fri": "condition",
+            "url": "https://www.youtube.com/embed/H6mRkx1x77k"
           },
           {
-            "sun": "legs2"
+            "sun": "hypertrophy",
+            "url": "https://www.youtube.com/embed/H6mRkx1x77k"
           }
         ],
         "w3": [
           {
-            "mon": "push2"
+            "mon": "condition",
+            "url": "https://www.youtube.com/embed/H6mRkx1x77k"
           },
           {
-            "wed": "pull2"
+            "wed": "cardio",
+            "url": "https://www.youtube.com/embed/H6mRkx1x77k"
           },
           {
-            "fri": "legs1"
+            "fri": "strength",
+            "url": "https://www.youtube.com/embed/H6mRkx1x77k"
           },
           {
-            "sun": "push3"
+            "sun": "hypertrophy",
+            "url": "https://www.youtube.com/embed/H6mRkx1x77k"
           }
         ],
         "w4": [
           {
-            "mon": "pull3"
+            "mon": "strength",
+            "url": "https://www.youtube.com/embed/H6mRkx1x77k"
           },
           {
-            "wed": "legs2"
+            "wed": "hypertrophy",
+            "url": "https://www.youtube.com/embed/H6mRkx1x77k"
           },
           {
-            "fri": "push1"
+            "fri": "cardio",
+            "url": "https://www.youtube.com/embed/H6mRkx1x77k"
           },
           {
-            "sun": "arms1"
+            "sun": "condition",
+            "url": "https://www.youtube.com/embed/H6mRkx1x77k"
           }
         ]
       }

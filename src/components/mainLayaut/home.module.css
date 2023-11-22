@@ -96,6 +96,12 @@
         /* width: 100%; */
     }
     .cards {
-        display: flex;
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .video {
+        width: 400px;
     }
 }
