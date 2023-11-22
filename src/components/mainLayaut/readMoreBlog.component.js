@@ -5,6 +5,7 @@ import { toast } from "react-hot-toast";
 import { queryClient } from "../../query/blogsQuery";
 import { deleteBlog } from "../../query/blogsQuery";
 import { useMutation } from "@tanstack/react-query";
+import classes from './readMoreBlog.module.css'
 
 const ReadMoreBlog = (data) => {
   // const data = props;
@@ -35,7 +36,7 @@ const ReadMoreBlog = (data) => {
   };
 
   return (
-    <div style={{background: "#d8d8d8", borderRadius: "1rem", padding: "1rem", overflow: "scroll", maxHeight: "25rem"}}>
+    <div className={classes.readMoreStyle}>
       <div>
         <h2>{selectedBlog.title}</h2>
         <p>{selectedBlog.content}</p>

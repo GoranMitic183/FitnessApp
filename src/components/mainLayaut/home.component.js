@@ -25,6 +25,7 @@ const Home = () => {
     queryFn: () => fetchTrainings(),
   });
 
+
   console.log(data);
   const storedToken = localStorage.getItem("token");
 
@@ -94,11 +95,11 @@ const Home = () => {
           {content === "addnewblog" && <NewBlog />}
           {content === "singleblog" && <SingleBlog />}
           {content === "readmore" && <ReadMoreBlog />}
-      {content === "editblog" && <EditBlog data={data}/>}
+          {content === "editblog" && <EditBlog data={data}/>}
         </div>
         <Iframe
           // url="https://www.youtube.com/embed/6grpJFNkiDs"
-          url={content === ""? "" : url}
+          url={content === "table"? url : ""}
           width="550px"
           height="300px"
           id=""

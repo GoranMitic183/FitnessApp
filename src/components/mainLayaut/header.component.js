@@ -57,7 +57,7 @@ const Header = () => {
     modal.current.open();
   };
 
-  let modalActions = <button className="btn  btn-secondary">Close</button>;
+  let modalActions = <button style={{margin: "0.5rem"}} className="btn  btn-secondary">Close</button>;
 
   return (
     <div className={`container ${classes.body}`}>

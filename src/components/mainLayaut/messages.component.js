@@ -86,7 +86,7 @@ const Messages = () => {
         <div style={{maxWidth: "30rem"}}>
           <p>{messageId.message}</p>
           <hr></hr>
-          <button className="btn btn-outline-secondary" onClick={handleBack}>
+          <button style={{margin: "0.5rem"}} className="btn btn-outline-secondary" onClick={handleBack}>
             Back
           </button>
         </div>

@@ -15,7 +15,7 @@ const Stopwatch = () => {
       } = useStopwatch({ autoStart: false });
 
   return (
-    <div style={{textAlign: 'center', color: 'white'}}>
+    <div style={{textAlign: 'center', color: 'white', paddingBottom: "1rem"}}>
       <h1>Stopwatch</h1>
       <p>Keep track your workout time!</p>
       <div style={{fontSize: '100px'}}>

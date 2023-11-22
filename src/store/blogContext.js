@@ -18,6 +18,7 @@ export const BlogContext = createContext({
   selectedBlog: null,
   blogsData: [],
   admin: false,
+  filterData: {},
   changeContentType: () => {},
   changeContentHelper: () => {},
   inputChange: () => {},
@@ -28,6 +29,7 @@ export const BlogContext = createContext({
   getMessagesQuery: () => {},
   deleteMessageQuery: () => {},
   setVideoUrlHandler: () => {},
+  filterDataHandler: () => {},
 });
 
 export default function BlogContextProvider({ children }) {
@@ -44,6 +46,11 @@ export default function BlogContextProvider({ children }) {
   const [singleBlog, setSingleBlog] = useState({});
   const [isAdmin, setIsAdmin] = useState(false);
   const [ videoUrl, setVideoUrl ] = useState('');
+  const [ filteredData, setFilteredData] = useState([]);
+
+  const filteredDataFn = (data) => {
+    setFilteredData(data)
+  }
 
   const setVideoUrlFn = (url) => {
     setVideoUrl(url);
@@ -125,6 +132,7 @@ export default function BlogContextProvider({ children }) {
     admin: isAdmin,
     blogsData: allBlogs,
     url: videoUrl,
+    filterData: filteredData,
     changeContentType: handleContent,
     changeContentHelper: handleChangeContentHelper,
     inputChange: handleInputChange,
@@ -135,6 +143,7 @@ export default function BlogContextProvider({ children }) {
     getMessagesQuery: getMessages,
     deleteMessageQuery: deleteMessageHandler,
     setVideoUrlHandler: setVideoUrlFn,
+    filterDataHandler: filteredDataFn,
   };
 
   return (

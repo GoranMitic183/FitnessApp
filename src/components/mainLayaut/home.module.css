@@ -14,14 +14,10 @@
 
 }
 .video {
-    /* position: absolute; */
     left: 55rem;
-    top: 7rem;
-    /* border-radius: 0.5rem; */
-    
+    top: 7rem;    
 }
 .startBtn {
-    /* position: absolute; */
     left: 18rem;
     top: 20rem;
     margin: 1rem;
@@ -42,19 +38,64 @@
     flex-direction: column;
 }
 .contentContainer {
-    padding: 1rem;
+    /* padding: 1rem; */
     border-radius: 0.5rem;
     width: 35rem;
-    height: 20rem;
+    height: 25rem;
      overflow:scroll;
-    /* scroll-behavior: smooth;  */
-    background-color: #d8d8d8;
+    /* background-color: #d8d8d8; */
     display: flex;
     align-items: center;
     justify-content: center;
-    /* height: 30rem; */
-    /* height: 90%; */
 }
-/* .regForm {
-    width: 100%;
-} */
+
+
+@media (max-width:1640px){
+    .contentContainer {
+        padding: 1rem;
+        border-radius: 0.5rem;
+        max-width: 28rem;
+         overflow:scroll;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1460px) {
+    .contentContainer {
+        max-width: 20rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1280px) {
+    .contentContainer {
+        max-width: 25rem;
+        margin: auto;
+        margin-bottom: 2.5rem;
+    }
+    .backPic {
+        display: block;
+        height: auto;
+    }
+    .btnContainer {
+        width: 30%;
+        margin: auto;
+    }
+    .video {
+        margin: auto;
+        top: 0;
+        left: 0;
+    }
+    .backPic {
+        padding: 5rem;
+        background-repeat:inherit;
+        /* width: 100%; */
+    }
+    .cards {
+        display: flex;
+    }
+}

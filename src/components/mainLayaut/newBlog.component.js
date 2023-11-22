@@ -46,18 +46,19 @@ const NewBlog = () => {
   }
 
   return (
-    <div style={{height:"25rem"}}>
+    <div>
       <div>
         <div
           style={{
-            margin: "auto",
-            padding: "0.5rem",
-            maxWidth: "450px",
+            maxHeight: "100%",
+            // margin: "1rem",
+            // padding: "0.5rem",
+            // maxWidth: "450px",
             alignContent: "center",
             // marginTop: "0.5rem",
           }}
         >
-          <MDBCard alignment="center" style={{ opacity: "0.9" }}>
+          <MDBCard alignment="center" style={{ opacity: "1" ,backgroundColor: "#373737", color: "#d8d8d8"}}>
             <MDBIcon fas icon="user-circle" className="fa-2x" />
             <h5>Add new blog</h5>
             <MDBCardBody>
@@ -68,7 +69,8 @@ const NewBlog = () => {
               >
                 <div className="col-md-12">
                   <MDBInput
-                    label="Title"
+                    // label="Title"
+                    placeholder="Title"
                     type="text"
                     value={formData.title}
                     name="title"
@@ -80,7 +82,8 @@ const NewBlog = () => {
                 </div>
                 <div className="col-md-12">
                   <MDBInput
-                    label="Description"
+                    // label="Description"
+                    placeholder="Description"
                     type="text"
                     value={formData.description}
                     name="description"
@@ -93,9 +96,9 @@ const NewBlog = () => {
 
                 <div className="col-md-12">
                   <MDBInput
-                  placeholder="Enter your text..."
+                  placeholder="Enter your message here..."
                   cols="35"
-                    label="Content"
+                    // label="Content"
                     type="text"
                     value={formData.content}
                     name="content"
@@ -107,7 +110,7 @@ const NewBlog = () => {
                 </div>
 
                 <div className="col-12">
-                  <MDBBtn style={{ width: "100%" }} className="btn btn-secondary">
+                  <MDBBtn style={{ width: "40%" }} className="btn btn-secondary">
                     Add
                   </MDBBtn>
                 </div>

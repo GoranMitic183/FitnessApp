@@ -66,15 +66,17 @@ const EditBlog = () => {
         <div>
           <div
             style={{
-              margin: "auto",
+              // margin: "2rem",
+              // height: "100%",
               padding: "15px",
-              maxWidth: "450px",
+              // maxWidth: "450px",
               alignContent: "center",
-              marginTop: "0.5rem",
+              marginTop: "2rem",
+              margin: "3rem 0",
             }}
           >
             <Toaster />
-            <MDBCard alignment="center" style={{ opacity: "0.8" }}>
+            <MDBCard alignment="center" style={{ opacity: "1", backgroundColor: "#373737", color: "#d8d8d8" }}>
               <MDBIcon fas icon="user-circle" className="fa-2x" />
               <h5>Edit blog</h5>
               <MDBCardBody>
@@ -123,22 +125,23 @@ const EditBlog = () => {
                     />
                   </div>
 
-                  <div className="col-12">
+                  <div className="col-12" style={{display: "flex"}}>
                     <MDBBtn
                       className="btn btn-dark mt-2"
                       style={{ marginRight: "0.5rem", width: "100%" }}
                     >
                       Edit
                     </MDBBtn>
-                  </div>
-                </MDBValidation>
-                <MDBBtn
+                    <MDBBtn
                   className="btn btn-secondary mt-2"
                   style={{ marginRight: "0.5rem", width: "100%" }}
                   onClick={handleEditBack}
                 >
                   Back
                 </MDBBtn>
+                  </div>
+                </MDBValidation>
+               
               </MDBCardBody>
             </MDBCard>
           </div>
